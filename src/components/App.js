@@ -5,13 +5,17 @@ import Story from './Story';
 import { handleMadLibSubmit } from '../actions';
 
 class App extends Component {
+
   render() {
+  
     return (
+  
       <div className="App">
         <Form onSubmit={this.props.handleMadLibSubmit}/>
-        {this.props.adjective}
+         <div> {this.props.adjective}</div>
         <Story />
       </div>
+
     );
   }
 }
