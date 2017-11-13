@@ -6,8 +6,8 @@ class Story extends Component {
   render() {
     return (
       <div className="Story">
-      <button onClick={this.props.onSubmit} >Show Story</button>
-      One {this.props.adjective} day, my trusty dog {this.props.verb} up to find a cat {this.props.adverb}.
+{/*      <button onClick={this.props.onSubmit} >Show Story</button>
+*/}      One {this.props.adjective} day, my trusty dog {this.props.verb} up to find a cat {this.props.adverb}.
       </div>
     );
   }
@@ -15,9 +15,9 @@ class Story extends Component {
 
 function MapStateToProps(state) {
 	return{
-		// adjective: state.adjective,
-		// verb: state.verb,
-		// adverb: state.adverb
+		adjective: state.adjective,
+		verb: state.verb,
+		adverb: state.adverb
 	};
 }
 

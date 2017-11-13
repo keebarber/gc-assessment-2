@@ -8,8 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form />
-        <Story onSubmit={this.props.handleMadLibSubmit}/>
+        <Form onSubmit={this.props.handleMadLibSubmit}/>
+        {this.props.adjective}
+        <Story />
       </div>
     );
   }
@@ -18,9 +19,9 @@ class App extends Component {
 
 function MapStateToProps(state) {
   return {
-    adjective: state.adjective,
-    verb: state.verb,
-    adverb: state.adverb
+    // adjective: state.adjective,
+    // verb: state.verb,
+    // adverb: state.adverb
   };
 }
 

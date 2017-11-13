@@ -44,7 +44,6 @@ function handleAdverbChange(state, event) {
 }
 
 function handleMadLibSubmit(state, event) {
-	event.preventDefault();
 
 	return Object.assign({}, state, {
 		adjective: state.adjective,
