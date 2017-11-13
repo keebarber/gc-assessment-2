@@ -12,8 +12,8 @@ export default function(state=INITIAL_STATE, action) {
 			return handleVerbChange(state, action.event);	
 		case "ADVERB":
 			return handleAdverbChange(state, action.event);
-		// case "MADLIB":
-		// 	return handleMadlibSubmit(state, action.event);	
+		case "MADLIB":
+			return handleMadLibSubmit(state, action.event);	
 		default:
 			return state;
 	}
@@ -43,10 +43,12 @@ function handleAdverbChange(state, event) {
 	});
 }
 
-// function handleAdjectiveChange(state, event) {
-// 	let adjective = event.target.value;
+function handleMadLibSubmit(state, event) {
+	event.preventDefault();
 
-// 	return Object.assign({}, state, {
-// 		adjective: adjective
-// 	});
-// }
+	return Object.assign({}, state, {
+		adjective: state.adjective,
+		verb: state.verb,
+		adverb: state.adverb
+	});
+}

@@ -1,25 +1,25 @@
-function handleAdjectiveChange(event) {
+export function handleAdjectiveChange(event) {
 	return {
 		type: "ADJECTIVE",
 		event
 	};
 }
 
-function handleVerbChange(event) {
+export function handleVerbChange(event) {
 	return {
 		type: "VERB",
 		event
 	};
 }
 
-function handleAdverbChange(event) {
+export function handleAdverbChange(event) {
 	return {
 		type: "ADVERB",
 		event
 	};
 }
 
-function handleMadLibSubmit(event) {
+export function handleMadLibSubmit(event) {
 	return {
 		type: "MADLIB",
 		event

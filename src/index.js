@@ -6,10 +6,10 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
-// import reducer from './reducers';
+import reducer from './reducers';
 
 const store = createStore(
-    // reducer,
+    reducer,
     applyMiddleware( createLogger() ) // Enable Redux logging which is handy for developers.
 );
 
